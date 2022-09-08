@@ -3,8 +3,8 @@
 /**
  * main	- print the string in the function
  *
- * Description: using the main fun funtion
- * this program prints "Programming is like building a multilingual puzzle"
+ * Description:	using the main fun funtion
+ * this program prints "Programming is like building a multilingual puzzle
  * Return: 0
  */
 int main(void)
