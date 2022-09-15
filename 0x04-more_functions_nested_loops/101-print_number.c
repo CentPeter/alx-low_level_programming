@@ -1,44 +1,23 @@
+#include <stdio.h>
 #include "main.h"
 
-
 /**
- * print_number - Print any number one character at a time
- * @n: Number to print
- *
- * Return: Nothing
- */
+* print_number - Prints a number
+* @n: The number to print
+*/
+
 void print_number(int n)
 {
-	long hn;
-	long n2 = n;
+	unsigned int num = n;
 
-	if (n2 < 0)
+	if (n < 0)
 	{
-		_putchar('-');
-		n2 *= -1;
+		putchar('-');
+		num = -num;
 	}
-	if (n2 / 100000 != 0)
+	if (num > 9)
 	{
-		hn = n2 / 100000;
-		_putchar(hn / 10000 % 10 + '0');
-		_putchar(hn / 1000 % 10 + '0');
-		_putchar(hn / 100 % 10 + '0');
-		_putchar(hn / 10 % 10 + '0');
-		_putchar(hn % 10 + '0');
+		print_number(num / 10);
 	}
-		hn = n2 % 100000;
-		if (hn / 10000 % 10 != 0)
-		{
-			_putchar(hn / 1000 % 10 + '0');
-			_putchar(hn / 100 % 10 + '0');
-			_putchar(hn / 10 % 10 + '0');
-		}
-		else if (hn / 100 % 10 != 0)
-		{
-			_putchar(hn / 100 % 10 + '0');
-			_putchar(hn / 10 % 10 + '0');
-		}
-		else if (hn / 10 % 10 != 0)
-			_putchar(hn / 10 % 10 + '0');
-		_putchar(hn % 10 + '0');
+	putchar(num % 10 + '0');
 }
