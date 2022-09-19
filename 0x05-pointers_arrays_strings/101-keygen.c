@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * main - randomise a password for 101-crackme
