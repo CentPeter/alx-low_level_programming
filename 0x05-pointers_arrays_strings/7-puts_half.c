@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts_half - Print the second half of a string
@@ -8,24 +9,14 @@
  */
 void puts_half(char *str)
 {
-	int i, h;
+	int x, y, i;
 
-	i = h = 0;
-	while (*(str + i) != 0)
-	{
-		i++;
-	}
-	if (i % 2 == 0)
-		i /= 2;
+	x = strlen (str);
+	if (x % 2 == 1)
+		y = x / 2 + 1
 	else
-	{
-		h = (i - 1) / 2;
-		i -= h;
-	}
-	while (*(str + i) != 0)
-	{
-		_putchar(*(str + i));
-		i++;
-	}
+		y = x / 2;
+	for (i = y; i < x; i++)
+		_putchar(str[i]);
 	_putchar('\n');
 }
