@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <time.h>
+#include <main.h>
 #include <stdlib.h>
 
 /**
@@ -21,5 +21,5 @@ int main(void)
 	}
 
 	printf("%c", unlock);
-	return (0)
+	return (0);
 }
