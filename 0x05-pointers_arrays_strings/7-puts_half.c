@@ -2,18 +2,16 @@
 #include <string.h>
 
 /**
- * puts_half - Print the second half of a string
- * @str: Given string to print half of
- *
- * Return: Nothing
+ * puts_half -> puts half
+ * @str: string parameters
  */
 void puts_half(char *str)
 {
 	int x, y, i;
 
-	x = strlen (str);
+	x = strlen(str);
 	if (x % 2 == 1)
-		y = x / 2 + 1
+		y = x / 2 + 1;
 	else
 		y = x / 2;
 	for (i = y; i < x; i++)
