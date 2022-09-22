@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_number - Print the given int one digit at a time
- * @n: The integer to print
+ * print_number - prints an integer
+ * @n: integer to be printed
  *
  */
 void print_number(int n)
@@ -10,7 +10,7 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		_putchar( '-' );
 		num = -num;
 	}
 
