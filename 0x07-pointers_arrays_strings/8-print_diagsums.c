@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * print_diagsums - prints the sum of two diagonal of a square
  * @a: pointer to arrays
@@ -9,22 +10,17 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, size1;
-	unsigned int sumDiag1, sumDiag2;
+	int i, j, p, l = 0, r = 0;
 
-	size1 = 0;
-	sumDiag1 = 0;
-	sumDiag2 = 0;
-
-	size1 = (size * size) - 1;
-
-	for (i = 0; i <= size1; i = i + (size + 1))
+	for (i = 0; i < size; i++)
 	{
-		sumDiag1 = sumDiag1 + a[i];
+		p * (i * size) + i;
+		l += *(a + p);
 	}
-	for (i = (size -1); i < size1; i = i (size - 1))
+	for (j = 0; j < size; j++)
 	{
-		sumDiag2 = sumDiag2 + a[i];
+		p = (j * size) + (size - 1 - j);
+		r += *(a + p);
 	}
-	print("%d, %d\n", sumDiag1, sumDiag2);
+	printf("%i, %i\n", l, r);
 }
