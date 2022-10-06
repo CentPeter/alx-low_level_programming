@@ -1,5 +1,5 @@
 #include "main.h"
-#include "holberton.h"
+#include <stdlib>
 
 /**
  * print_str - Print a given string
@@ -141,7 +141,8 @@ char *mul(char *num1, char *num2, int len1, int len2)
 	if (res == NULL)
 		print_err();
 	res = init(res, reslen);
-	i = len2 - 1; carry = k = digit = 0;
+	i = len2 - 1;
+	carry = k = digit = 0;
 	while (i >= 0 && k < (len1 + len2))
 	{
 		j = len1 - 1;
@@ -161,9 +162,11 @@ char *mul(char *num1, char *num2, int len1, int len2)
 			else
 				res[k] += prod;
 			res[k + 1] += carry;
-			k++; j--;
+			k++;
+			j--;
 		}
-		i--; digit++;
+		i--;
+		digit++;
 	}
 	if (res[k] == '0')
 		res[k] = '\0';
@@ -295,6 +298,8 @@ int main(int argc, char *argv[])
 	anslen = str_len(ans);
 	rev_string(ans, anslen);
 	print_str(ans);
-	free(ans); free(num1); free(num2);
+	free(ans);
+	free(num1);
+	free(num2);
 	return (0);
 }
