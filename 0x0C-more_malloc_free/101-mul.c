@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 /**
  * _print - moves a string one place to the left and prints the string
  * @str: string to move
@@ -145,5 +144,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	_print(a, ln - 1);
-	return (0);
+	return (0);
 }
