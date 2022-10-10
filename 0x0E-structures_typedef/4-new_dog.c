@@ -1,5 +1,5 @@
 #include <stdlib.h>
-include "dog.h"
+#include "dog.h"
 /**
  * new_dog - creates a new dog
  * @name: 1st member
@@ -10,7 +10,7 @@ include "dog.h"
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, lenN, len0;
+	int i, lenN, lenO;
 
 	struct dog *n_dog = NULL;
 
@@ -18,7 +18,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (name[lenN] != '\0')
 		lenN++;
 
-	len0 = 0;
+	lenO = 0;
 	while (owner[lenO] != '\0')
 		len0++;
 
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(n_dog);
 		return (NULL);
 	}
-	n_dog->owner = malloc(len0 + 1);
+	n_dog->owner = malloc(lenO + 1);
 	if (n_dog->owner == NULL)
 	{
 		free(n_dog->name);
@@ -45,7 +45,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	for (i = 0; i <= lenN; i++)
 		n_dog->name[i] = name[i];
-	for (i = 0; i <= len0; i++)
+	for (i = 0; i <= lenO; i++)
 		n_dog->owner[i] = owner[i];
 	n_dog->age = age;
 	return (n_dog);
