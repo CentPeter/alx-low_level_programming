@@ -1,5 +1,3 @@
-#include "function_pointers.h"
-
 /**
  * print_ name - to print a name
  * @name: points to name
