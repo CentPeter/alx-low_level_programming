@@ -1,6 +1,7 @@
-#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * op_add return the sum of 2 numbers
+ * op_add - return the sum of 2 numbers
  * @a: integer
  * @b: integer
  *
@@ -12,7 +13,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub returns difference of 2 numbers
+ * op_sub - returns difference of 2 numbers
  * @a: integer
  * @b: integer
  *
@@ -32,7 +33,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	return ( a * b);
+	return (a * b);
 }
 
 /**
