@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * main - print opcodes of a given machine
- * @srgc: number of arguments
+ * @argc: number of arguments
  * @argv: argument vector
  *
  * Return: 0
