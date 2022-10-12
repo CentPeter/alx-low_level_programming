@@ -3,10 +3,10 @@
 
 /**
  * get_op_func - selects the correct operation toperform
- * @s: operation to perform
- * Return: pointer to the correct function
+ * @s: operator used
+ *
+ * Return:correct function result of NULL if operator is wrong
  */
-
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -20,11 +20,13 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (ops[i].op != NULL)
+	while (i < 5)
 	{
-		if (strcmp(s, ops[i].op) == 0)
-			break;
+		if (s[0] == ops[i].op[0])
+		{
+			return (ops[i].f);
+		}
 		i++;
 	}
-	return (ops[i].f);
+	return (NULL);
 }
